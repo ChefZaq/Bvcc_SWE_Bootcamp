@@ -11,10 +11,11 @@ def number_factors(number):
     return numList
 
 
-
 #Method for checking if when given a word is an anagram
 def anagram(word, match):
     if word is NULL or match is NULL:
+        return False
+    if word in "1234567890!@#$%^&*()_+-=,<>./?;:{[}]|\~`' " or match in "1234567890!@#$%^&*()_+-=,<>./?;:{[}]|\~`'":
         return False
     wordTemp = re.sub("^\\s+|\\s+$|\\s+", "", word.lower())
     matchTemp =  re.sub("^\\s+|\\s+$|\\s+", "", match.lower())
